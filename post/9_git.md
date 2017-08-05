@@ -55,43 +55,14 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           
-  
-    
-      <a href="/post/14_google.html"><p>Гугл</p></a>
-    
-      <a href="/post/27_devman.html"><p>Девман</p></a>
-    
-      <a href="/post/29_english.html"><p>Английский</p></a>
-    
-      <a href="/post/7_codenvy.html"><p>Кодэнви</p></a>
-    
-      <a href="/post/8_cli.html"><p>Консоль</p></a>
-    
-      <a href="/post/9_git.html"><p>Гит и Гитхаб</p></a>
-    
-  
-    
-      <a href="/post/10_pep8.html"><p>Стайлгайд</p></a>
-    
-      <a href="/post/18_comments.html"><p>Комментарии</p></a>
-    
-      <a href="/post/1_intro.html"><p>Зачем нужен Питон</p></a>
-    
-      <a href="/post/2_base_types.html"><p>Основные типы данных</p></a>
-    
-      <a href="/post/3_base_constructions.html"><p>Основные конструкции</p></a>
-    
-      <a href="/post/4_types.html"><p>Типы данных</p></a>
-    
-      <a href="/post/5_modules.html"><p>Модули</p></a>
-    
-      <a href="/post/6_tips_and_tricks.html"><p>Полезные приёмы</p></a>
-    
-  
-    
-      <a href="/post/22_git_history.html"><p>История</p></a>
-    
-  
+  <h2>Гит и Гитхаб</h2>
+  <p>Гит – штука для управления кодом. Вместо чтения рекомендую начать с <a href="https://try.github.io">туториала на Гитхабе</a> (en).
+Он займёт 15 минут и даст представление о том, что это за зверь и как им пользоваться.</p>
+<p>Следующий шаг – <a href="https://githowto.com/ru">туториал на githowto.com</a>, он на русском и куда длиннее.</p>
+<p>Гитхаб – это что-то типа Фейсбука для программистов. Код вместо постов, баги вместо котиков. Идиллия.
+Чтобы познакомиться с ним ближе, рекомендую выполнить их <a href="https://guides.github.com/activities/hello-world/">Hello World</a>.
+После можно пройти <a href="https://guides.github.com/">остальные руководства от Гитхаба</a>, это очень полезные навыки для разработчика.</p>
+  <h3><a href="/index.html">На главную</a></h3>
 
         </div>
       </div>

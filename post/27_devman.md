@@ -55,43 +55,20 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           
-  
-    
-      <a href="/post/14_google.html"><p>Гугл</p></a>
-    
-      <a href="/post/27_devman.html"><p>Девман</p></a>
-    
-      <a href="/post/29_english.html"><p>Английский</p></a>
-    
-      <a href="/post/7_codenvy.html"><p>Кодэнви</p></a>
-    
-      <a href="/post/8_cli.html"><p>Консоль</p></a>
-    
-      <a href="/post/9_git.html"><p>Гит и Гитхаб</p></a>
-    
-  
-    
-      <a href="/post/10_pep8.html"><p>Стайлгайд</p></a>
-    
-      <a href="/post/18_comments.html"><p>Комментарии</p></a>
-    
-      <a href="/post/1_intro.html"><p>Зачем нужен Питон</p></a>
-    
-      <a href="/post/2_base_types.html"><p>Основные типы данных</p></a>
-    
-      <a href="/post/3_base_constructions.html"><p>Основные конструкции</p></a>
-    
-      <a href="/post/4_types.html"><p>Типы данных</p></a>
-    
-      <a href="/post/5_modules.html"><p>Модули</p></a>
-    
-      <a href="/post/6_tips_and_tricks.html"><p>Полезные приёмы</p></a>
-    
-  
-    
-      <a href="/post/22_git_history.html"><p>История</p></a>
-    
-  
+  <h2>Девман</h2>
+  <p>Девман – сборник задач для обучения программированию и теории, необходимой для этого.</p>
+<p>У всех задач одни требования:</p>
+<ul>
+<li>Код на Гитхабе, в форкнутом оригинальном репозитории. Ссылку на него можно найти на странице задачи, справа сбоку.</li>
+<li>Только Питон 3.5+.</li>
+<li><a href="/encyclopedia/python_basics/python_basics_pep8/">Соблюдение PEP 8</a>.</li>
+<li>Все сторонние пакеты должны быть перечислены в файле <code>requirements.txt</code> в корне репозитория.
+Устанавливаться должны по команде <code>pip install -r requirements.txt</code>.</li>
+<li>Если в репо больше одного <code>py</code>-файла, то в <code>README.md</code> должно быть написано, что и как запускать.</li>
+<li>Официальная ОС – Ubuntu 14.04. Легче всего до неё добраться, установив себе или использовав <a href="/encyclopedia/tutorial/tutorial_codenvy/">Кодэнви</a>.</li>
+</ul>
+<p>Официальный канал связи – общий Слак, все вопросы туда.</p>
+  <h3><a href="/index.html">На главную</a></h3>
 
         </div>
       </div>

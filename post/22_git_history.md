@@ -55,43 +55,17 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           
-  
-    
-      <a href="/post/14_google.html"><p>Гугл</p></a>
-    
-      <a href="/post/27_devman.html"><p>Девман</p></a>
-    
-      <a href="/post/29_english.html"><p>Английский</p></a>
-    
-      <a href="/post/7_codenvy.html"><p>Кодэнви</p></a>
-    
-      <a href="/post/8_cli.html"><p>Консоль</p></a>
-    
-      <a href="/post/9_git.html"><p>Гит и Гитхаб</p></a>
-    
-  
-    
-      <a href="/post/10_pep8.html"><p>Стайлгайд</p></a>
-    
-      <a href="/post/18_comments.html"><p>Комментарии</p></a>
-    
-      <a href="/post/1_intro.html"><p>Зачем нужен Питон</p></a>
-    
-      <a href="/post/2_base_types.html"><p>Основные типы данных</p></a>
-    
-      <a href="/post/3_base_constructions.html"><p>Основные конструкции</p></a>
-    
-      <a href="/post/4_types.html"><p>Типы данных</p></a>
-    
-      <a href="/post/5_modules.html"><p>Модули</p></a>
-    
-      <a href="/post/6_tips_and_tricks.html"><p>Полезные приёмы</p></a>
-    
-  
-    
-      <a href="/post/22_git_history.html"><p>История</p></a>
-    
-  
+  <h2>История</h2>
+  <p>История изменений в коде очень важна при работе в команде. По ней программисты ориентируются.</p>
+<p>Такие емкие комментарии как "исправлено", "обновлено", "сделано" не только бесполезны, но
+они заставляют вычитывать код чтобы разобраться в смысле изменений внесенных кем-то другим. 
+Это время и нервы помноженные на размер команды. Не делай так!</p>
+<p>Вот тут написано как надо делать:</p>
+<ul>
+<li><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">A Note About Git Commit Messages</a> (en)</li>
+<li><a href="http://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a> (en)</li>
+</ul>
+  <h3><a href="/index.html">На главную</a></h3>
 
         </div>
       </div>

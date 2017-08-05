@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Сайт</title>
+    <link rel="icon" href="/static/image/favicon.ico">
+<!-- Bootstrap core CSS -->
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="/static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="/static/css/jumbotron.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="/static/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="/static/js/ie-emulation-modes-warning.js"></script>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="/static/js/html5shiv.min.js"></script>
+  <script src="/static/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/static/js/ie10-viewport-bug-workaround.js"></script>
+
+  </head>
+
+  <body style="padding-top:0px;">
+
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          
+  <a class="navbar-brand" href="/index.html">Главная</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          
+  <h2>Гугл</h2>
+  <p>Правильно искать информацию в сети – важно. Подберёшь неправильный запрос – не найдёшь нужной ссылки.
+Иногда приходится делать много попыток, чтобы найти то, что надо. Тратишь полчаса на поиск решения проблемы,
+а какой-нибудь Вася найдёт то же, но за один запрос.</p>
+<p>В итоге правильное использование поиска не только позволяет экономить время, но и не чувствовать себя идиотом.</p>
+<blockquote>
+<p>Это же чёртов поиск, написал запрос – увидел результат. Чего сложного?</p>
+</blockquote>
+<p>Сложно написать запрос правильно. Оказывается, Гугл умеет много вещей, которые очень помогают искать информацию.
+Их надо знать и использовать.</p>
+<p>Вот где о них можно узнать:</p>
+<ul>
+<li><a href="https://coursebuilder.withgoogle.com/sample/course">Мини-курс Power Searching With Google</a> (en). Да, у Гугла есть
+онлайн-курс про то, как пользоваться Гуглом (даже два курса). Видео-лекции, домашние задания. Всё серьёзно.
+Очень рекомендую: он короткий и очень подробный.</li>
+<li><a href="https://www.google.com/intl/en_us/insidesearch/tipstricks/all.html">Google Tips &amp; Tricks</a> (en).</li>
+<li><a href="https://habrahabr.ru/sandbox/46956/">Как правильно искать в Google</a>.</li>
+<li><a href="http://it2b.ru/blog/arhiv/761.html">Google без секретов (операторы Гугла в практических примерах)</a>.</li>
+</ul>
+  <h3><a href="/index.html">На главную</a></h3>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
