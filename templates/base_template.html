@@ -13,11 +13,24 @@
   </head>
 
   <body style="padding-top:0px;">
+  <style>
+      .without-background:focus, .without-background:active, .without-background:hover {
+          background-color: white !important;
+          text-decoration: underline !important;
+      }
+      .without-background {
+          font-size: 3em;
 
-    <nav class="navbar navbar-inverse">
+      }
+  </style>
+    <nav class="navbar">
       <div class="container">
-        <div class="navbar-header">
-          {% block navbar %} {% endblock %}
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+
+              {% block navbar %} {% endblock %}
+
+          </div>
         </div>
       </div>
     </nav>

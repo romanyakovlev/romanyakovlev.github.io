@@ -2,14 +2,25 @@
 
 
 {% block navbar %}
-  <a class="navbar-brand" href="{{index_link}}">Главная</a>
+
+
+
+
+  <ul class="nav navbar-nav">
+    <li><a class="navbar-brand without-background" href="http://romanyakovlev.github.io">romanyakovlev.github.io</a></li>
+  </ul>
+
+  <!--<ul class="nav navbar-nav navbar-right">
+    <li><a class="navbar-brand without-background" href="{{index_link}}">Главная</a></li>
+</ul> -->
+
 {% endblock %}
 
 
 {% block content %}
   {% for topic in topics %}
     {% for article in articles[topic.slug] %}
-      <a href="{{article.href}}"><p>{{article.title}}</p></a>
+      <a href="{{article.href}}" style="font-size:2em;"><p>{{article.title}}</p></a>
     {% endfor %}
   {% endfor %}
 {% endblock %}

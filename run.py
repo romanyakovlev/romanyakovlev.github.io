@@ -15,7 +15,8 @@ def render_static_to_html(template_environment, root_folder_path):
   relative_path_static = os.path.join('templates', 'static_template.html')
   static_template = template_environment.get_template(relative_path_static)
   #path_to_dir = os.path.join(os.sep, '19_site_generator)
-  static_template.stream(path_to_dir= os.getcwd()+'/').dump(path_to_static)
+  #static_template.stream(path_to_dir= os.getcwd()+'/').dump(path_to_static)
+  static_template.stream(path_to_dir= '/').dump(path_to_static)
 
 
 def get_json_config():
