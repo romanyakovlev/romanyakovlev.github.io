@@ -19,6 +19,6 @@
 
 {% block content %}
   {% for article in articles_arr %}
-    <a href="/post/{{article['href']}}" style="font-size:2em;"><p>{{article['title']['title'][0]}}</p></a>
+    <a href="/articles/{{article['href']}}" style="font-size:2em;"><p>{{article['title']['title'][0]}}</p></a>
   {% endfor %}
 {% endblock %}
