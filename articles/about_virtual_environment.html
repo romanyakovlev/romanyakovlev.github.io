@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Сайт</title>
+    <link rel="icon" href=" /static/image/favicon.ico">
+<!-- Bootstrap core CSS -->
+<link href=" /static/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href=" /static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href=" /static/css/jumbotron.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src=" /static/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src=" /static/js/ie-emulation-modes-warning.js"></script>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src=" /static/js/html5shiv.min.js"></script>
+  <script src=" /static/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=" /static/js/jquery.min.js"></script>
+<script src=" /static/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src=" /static/js/ie10-viewport-bug-workaround.js"></script>
+
+  </head>
+
+  <body style="padding-top:0px;">
+  <style>
+      .without-background:focus, .without-background:active, .without-background:hover {
+          background-color: white !important;
+          text-decoration: underline !important;
+      }
+      .without-background {
+          font-size: 3em;
+
+      }
+  </style>
+    <nav class="navbar">
+      <div class="container">
+        <div class="row" style="margin-top:20px;">
+          <div class="col-md-8 col-md-offset-2">
+
+              
+<ul class="nav navbar-nav">
+  <li><a class="navbar-brand without-background" href="http://romanyakovlev.github.io">romanyakovlev.github.io</a></li>
+</ul>
+
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          
+  <span style="font-size:2.5em;">Виртуальное окружение - что это такое и вообще зачем</span>
+  <div style="font-size:1.5em;">
+      <h1>Что это такое</h1>
+<p>Виртуальное окружение - это изолированное окружение среды (в нашем случае это окружение Python), которое позволяет нам использовать определенные версии приложений.</p>
+<h2>Зачем оно мне?</h2>
+<p>Предположим, сейчас ты работаешь над несколькими проектами одновременно, и для каждого из них по тем или иным причинам есть свои определенные особенгсти версий пакетов. Например, на одном проекте у тебя Джанга 1.10, на втором - 1.8 , а на третьем - 1.5, да и в придачу Питон 2-й версии. При этом версии приложений менять ну никак нельзя - придется много чего переделывать да и вообще. Вот для таких ситуаций нам как раз и пригодитя виртуальное окружение, позволяющее использовать разные версии приложений.</p>
+<h1>Что использовать</h1>
+<p>Все пакеты, работающие с виртуальным окружением решают одну проблему - они позволяют проектам, которые имеют различные (и часто конфликтующие) зависимости, сосуществовать на одной системе.</p>
+<h2>Virtualenv</h2>
+<p>virtualenv - стандартный пакет для работы с виртуальным окружением. Используется вместе с virtualenvwrapper для более удобной работы. Установить и ознакомиться подробнее можно в <a href="https://devman.org/encyclopedia/pip/pip_virtualenv/">энциклопедии Девмана</a></p>
+<h1>Аналоги</h1>
+<p>Хоть venv и является самым популярным выбором, существуют другие не менее интересные варианты.</p>
+<h2>Pyenv</h2>
+<p>Инструмент, позволяющий изолированно использовать различные версии Python. Например, если тебе нужно запустить твой код на разных версиях Питона (2.6, 2.7, 3.3...), то это то, что тебе нужно. Для создания полноценного изолированного окружения следует использовать пакет pyenv-virualenv, позволющий пользоваться pyenv и virtualenv одновременно. Список команд с их описанием <a href="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md">здесь(на английском)</a>.</p>
+<h3>Установка</h3>
+<p>Клонируем репозиторий
+<code>sh
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv</code>
+Устанавливаем переменные окружения (если у вас Linux, <code>/.bash_profile</code> меняем на <code>/.bashrc )</code>sh
+echo 'export PYENV_ROOT="$HOME/.pyenv"' &gt;&gt; ~/.bash_profile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' &gt;&gt; ~/.bash_profile
+```</p>
+<p>Инициализируем загрузку pyenv в терминале
+<code>sh
+echo 'eval "$(pyenv init -)"' &gt;&gt; ~/.bash_profile</code>
+Перезапускаем терминал</p>
+<h3>Команды</h3>
+<p>Устанавливаем Питон
+<code>sh
+pyenv install 2.7.9
+pyenv install 3.4.3</code>
+Делаем rehash после установки
+<code>sh
+pyenv rehash</code>
+Задаем версию Питона для определенной директории. Версия хранится в файле <code>.python-version</code>
+<code>sh
+pyenv local 2.7.6</code>
+Задаем версию глобально. Будет заменена в случае, если задан файл <code>.python-version</code>
+<code>sh
+pyenv global 3.3.2</code></p>
+<h2>Conda</h2>
+<p>Conda - пакетный менеджер, который также позволяет нам создавать виртуальные окружения.</p>
+<h3>Установка</h3>
+<p>Установим пакет Miniconda - это всего лишь conda и ее зависимости. Скачиваем файл по <a href="https://conda.io/miniconda.html">ссылке</a>. Запускаем файл в терминале
+<code>bash Miniconda3-latest-Linux-x86_64.sh</code>
+, ждем завершения установки, перезапускаем терминал. ЧТобы убедиться в том, что установка произошла успешно, выполни <code>conda list</code>. Если все хорошо, ты увидишь пакеты, которые были установлены.</p>
+<h3>Работа с виртуальным окружением</h3>
+<p>Создаем виртуальное окружение
+<code>sh
+conda create -n yourenvname python=x.x</code>
+Активируем
+<code>sh
+source activate yourenvname</code>
+Деактивируем
+<code>sh
+source deactivate</code>
+Удаляем окружение
+<code>sh
+conda remove -n yourenvname -all</code>
+Установку пакетов можно произвоздить как с помощью conda, так и pip. Pip устанавливается вместе с зависимостями.</p>
+  </div>
+  <h3><a href="/index.html" style="font-size:3em;">На главную</a></h3>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
