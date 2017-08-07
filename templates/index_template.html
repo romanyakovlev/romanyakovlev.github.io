@@ -18,9 +18,7 @@
 
 
 {% block content %}
-  {% for topic in topics %}
-    {% for article in articles[topic.slug] %}
-      <a href="{{article.href}}" style="font-size:2em;"><p>{{article.title}}</p></a>
-    {% endfor %}
+  {% for article in articles_arr %}
+    <a href="/post/{{article['href']}}" style="font-size:2em;"><p>{{article['title']['title'][0]}}</p></a>
   {% endfor %}
 {% endblock %}

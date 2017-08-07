@@ -9,7 +9,7 @@
 
 
 {% block content %}
-  <span >{{article.title}}</span>
-  {{article.html_text}}
+  <span style="font-size:3em;">{{article['title'][0]}}</span>
+  {{html_text}}
   <h3><a href="{{index_link}}" style="font-size:3em;">На главную</a></h3>
 {% endblock %}
