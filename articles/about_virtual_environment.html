@@ -85,51 +85,64 @@
 <h2>Pyenv</h2>
 <p>Инструмент, позволяющий изолированно использовать различные версии Python. Например, если тебе нужно запустить твой код на разных версиях Питона (2.6, 2.7, 3.3...), то это то, что тебе нужно. Для создания полноценного изолированного окружения следует использовать пакет pyenv-virualenv, позволющий пользоваться pyenv и virtualenv одновременно. Список команд с их описанием <a href="https://github.com/pyenv/pyenv/blob/master/COMMANDS.md">здесь(на английском)</a>.</p>
 <h3>Установка</h3>
-<p>Клонируем репозиторий
-<code>sh
-git clone https://github.com/yyuu/pyenv.git ~/.pyenv</code>
-Устанавливаем переменные окружения (если у вас Linux, <code>/.bash_profile</code> меняем на <code>/.bashrc )</code>sh
-echo 'export PYENV_ROOT="$HOME/.pyenv"' &gt;&gt; ~/.bash_profile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' &gt;&gt; ~/.bash_profile
-```</p>
-<p>Инициализируем загрузку pyenv в терминале
-<code>sh
-echo 'eval "$(pyenv init -)"' &gt;&gt; ~/.bash_profile</code>
-Перезапускаем терминал</p>
+<p>Клонируем репозиторий</p>
+<pre><code class="sh">git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+</code></pre>
+
+<p>Устанавливаем переменные окружения (если у вас Linux, <code>/.bash_profile</code> меняем на ```/.bashrc )</p>
+<pre><code class="sh">echo 'export PYENV_ROOT=&quot;$HOME/.pyenv&quot;' &gt;&gt; ~/.bash_profile
+echo 'export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Инициализируем загрузку pyenv в терминале</p>
+<pre><code class="sh">echo 'eval &quot;$(pyenv init -)&quot;' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Перезапускаем терминал</p>
 <h3>Команды</h3>
-<p>Устанавливаем Питон
-<code>sh
-pyenv install 2.7.9
-pyenv install 3.4.3</code>
-Делаем rehash после установки
-<code>sh
-pyenv rehash</code>
-Задаем версию Питона для определенной директории. Версия хранится в файле <code>.python-version</code>
-<code>sh
-pyenv local 2.7.6</code>
-Задаем версию глобально. Будет заменена в случае, если задан файл <code>.python-version</code>
-<code>sh
-pyenv global 3.3.2</code></p>
+<p>Устанавливаем Питон</p>
+<pre><code class="sh">pyenv install 2.7.9
+pyenv install 3.4.3
+</code></pre>
+
+<p>Делаем rehash после установки</p>
+<pre><code class="sh">pyenv rehash
+</code></pre>
+
+<p>Задаем версию Питона для определенной директории. Версия хранится в файле <code>.python-version</code></p>
+<pre><code class="sh">pyenv local 2.7.6
+</code></pre>
+
+<p>Задаем версию глобально. Будет заменена в случае, если задан файл <code>.python-version</code></p>
+<pre><code class="sh">pyenv global 3.3.2
+</code></pre>
+
 <h2>Conda</h2>
 <p>Conda - пакетный менеджер, который также позволяет нам создавать виртуальные окружения.</p>
 <h3>Установка</h3>
-<p>Установим пакет Miniconda - это всего лишь conda и ее зависимости. Скачиваем файл по <a href="https://conda.io/miniconda.html">ссылке</a>. Запускаем файл в терминале
-<code>bash Miniconda3-latest-Linux-x86_64.sh</code>
-, ждем завершения установки, перезапускаем терминал. ЧТобы убедиться в том, что установка произошла успешно, выполни <code>conda list</code>. Если все хорошо, ты увидишь пакеты, которые были установлены.</p>
+<p>Установим пакет Miniconda - это всего лишь conda и ее зависимости. Скачиваем файл по <a href="https://conda.io/miniconda.html">ссылке</a>. Запускаем файл в терминале</p>
+<pre><code>bash Miniconda3-latest-Linux-x86_64.sh
+</code></pre>
+
+<p>, ждем завершения установки, перезапускаем терминал. ЧТобы убедиться в том, что установка произошла успешно, выполни <code>conda list</code>. Если все хорошо, ты увидишь пакеты, которые были установлены.</p>
 <h3>Работа с виртуальным окружением</h3>
-<p>Создаем виртуальное окружение
-<code>sh
-conda create -n yourenvname python=x.x</code>
-Активируем
-<code>sh
-source activate yourenvname</code>
-Деактивируем
-<code>sh
-source deactivate</code>
-Удаляем окружение
-<code>sh
-conda remove -n yourenvname -all</code>
-Установку пакетов можно произвоздить как с помощью conda, так и pip. Pip устанавливается вместе с зависимостями.</p>
+<p>Создаем виртуальное окружение</p>
+<pre><code class="sh">conda create -n yourenvname python=x.x
+</code></pre>
+
+<p>Активируем</p>
+<pre><code class="sh">source activate yourenvname
+</code></pre>
+
+<p>Деактивируем</p>
+<pre><code class="sh">source deactivate
+</code></pre>
+
+<p>Удаляем окружение</p>
+<pre><code class="sh">conda remove -n yourenvname -all
+</code></pre>
+
+<p>Установку пакетов можно произвоздить как с помощью conda, так и pip. Pip устанавливается вместе с зависимостями.</p>
   </div>
   <h3><a href="/index.html" style="font-size:3em;">На главную</a></h3>
 

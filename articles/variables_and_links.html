@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Сайт</title>
+    <link rel="icon" href=" /static/image/favicon.ico">
+<!-- Bootstrap core CSS -->
+<link href=" /static/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href=" /static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href=" /static/css/jumbotron.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src=" /static/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src=" /static/js/ie-emulation-modes-warning.js"></script>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src=" /static/js/html5shiv.min.js"></script>
+  <script src=" /static/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=" /static/js/jquery.min.js"></script>
+<script src=" /static/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src=" /static/js/ie10-viewport-bug-workaround.js"></script>
+
+  </head>
+
+  <body style="padding-top:0px;">
+  <style>
+      .without-background:focus, .without-background:active, .without-background:hover {
+          background-color: white !important;
+          text-decoration: underline !important;
+      }
+      .without-background {
+          font-size: 3em;
+
+      }
+  </style>
+    <nav class="navbar">
+      <div class="container">
+        <div class="row" style="margin-top:20px;">
+          <div class="col-md-8 col-md-offset-2">
+
+              
+<ul class="nav navbar-nav">
+  <li><a class="navbar-brand without-background" href="http://romanyakovlev.github.io">romanyakovlev.github.io</a></li>
+</ul>
+
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          
+  <span style="font-size:2.5em;font-weight:bold;">В Питоне переменные передаются по ссылке или по значению? Есть подводные камни?</span>
+  <div style="font-size:1.5em;">
+      <p>Все завист от того, какой тип объектов ты передаешь в качестве переменной.
+В Питоне существует два типа объектов</p>
+<h2>Неизменяемые (mutable)</h2>
+<p>Неизменяемые объекты передаются по значению. Это значит, что при изменении значения переменной будет создан новый объект.
+К этому типу относятся:
+- числовые данные (int, float, complex)
+- символьные строки (str)
+- кортежи (tuple)
+При инициализации переменной незменяемого типа создается объект (например, целое число), этот объект имеет некоторый идентификатор:</p>
+<pre><code class="sh">&gt;&gt;&gt; a = 10
+&gt;&gt;&gt; id(a)
+10914656
+</code></pre>
+
+<p>оператор <code>=</code> связывает переменную <code>a</code> и объект посредством ссылки. При этом вы не можете изменить сам объект, т.е. когда вы присвоите переменной новое значение, интерпретатор создаст новый объект (если до этого этот объект был создан, то переменная просто получит ссылку), а первоначальный объект удалится из памяти сбощиком мусора, если ссылок на него больше нет.</p>
+<h2>Изменяемые (immutable)</h2>
+<p>Неизменяемые объекты передаются по ссылке. Это значит, что при изменении значения переменной объект будет изменен.
+К этому типу относятся:
+- списки (list)
+- множества (set)
+- словари (dict)</p>
+<h3>Подводные камни</h3>
+<p>Создадим список <code>a</code>, установим для переменной <code>b</code> ссылку на <code>a</code>, прибавим к <code>b</code> элемент списка и выведем их значения и идентификаторы на экран:</p>
+<pre><code class="sh">&gt;&gt;&gt; a = [1, 2]
+&gt;&gt;&gt; b = a
+&gt;&gt;&gt; b.append(3)
+&gt;&gt;&gt; print(a, b)
+[1, 2, 3] [1, 2, 3]
+&gt;&gt;&gt; print(id(a), id(b))
+139748057891656 139748057891656
+</code></pre>
+
+<p>Как мы видим, переменные имеют одинаковые <code>id</code> и элементы списка. Если ты не знаешь об этой особенности изменяемых объетов, то такое поведение программы для тебя становится полной неожиданностью и может привести к ошибке в работе программы.
+Таким же образом с помощью ссылки на изменяемый объект, переменная передается в функцию:</p>
+<pre><code class="sh">&gt;&gt;&gt; def add_value(a):
+...  a.append(3)
+&gt;&gt;&gt; b = [1, 2]
+&gt;&gt;&gt; add_value(b)
+&gt;&gt;&gt; print(b)
+[1, 2, 3]
+</code></pre>
+
+<p>Даже возвращая <code>None</code>, функция изменила список <code>a</code>, чего бы нам не хотелос.</p>
+<h3>Что с этим можно сделать</h3>
+<p>Для того, чтобы передать в функцию изменяемую переменную как значение, нужно сделать копию изменяемого элемента. Создадим копию списка:</p>
+<pre><code class="sh">новый_лист = старый_лист[:]
+</code></pre>
+
+<p>Тоже самое можем сделать вот так:</p>
+<pre><code class="sh">новый_лист = list(старый_лист)
+</code></pre>
+
+<p>Переменная <code>новый_лист</code> ссылается на новый объект:</p>
+<pre><code class="sh">&gt;&gt;&gt; id(старый_лист), id(новый_лист)
+(139748050279112, 139748057891656)
+</code></pre>
+
+<p>Это дает нам возможность изменять оба объекта независимо друг от друга.</p>
+<h1>Что почитать</h1>
+<ul>
+<li><a href="https://ru.stackoverflow.com/questions/420140/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8-%D0%B2-python">Переменные-ссылки в Python</a></li>
+<li><a href="http://foobarnbaz.com/2012/07/08/understanding-python-variables/">Understanding Python variables and Memory Management</a></li>
+</ul>
+  </div>
+  <h3><a href="/index.html" style="font-size:3em;">На главную</a></h3>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

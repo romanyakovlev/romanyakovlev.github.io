@@ -19,7 +19,7 @@ def render_static_to_html(template_environment, root_folder_path):
 
 def get_rendered_markdown_text_from_file(path_to_file):
   markdown_text = open(path_to_file).read()
-  md = markdown.Markdown(extensions = ['markdown.extensions.meta'])
+  md = markdown.Markdown(extensions = ['markdown.extensions.meta', 'markdown.extensions.fenced_code'])
   rendered_text = md.convert(markdown_text)
   return rendered_text
 
