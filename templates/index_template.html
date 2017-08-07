@@ -7,7 +7,7 @@
 
 
   <ul class="nav navbar-nav">
-    <li><a class="navbar-brand without-background" href="http://romanyakovlev.github.io">romanyakovlev.github.io</a></li>
+    <li><a style="word-break: break-word;line-height: 40px;" class="navbar-brand without-background" href="http://romanyakovlev.github.io">romanyakovlev.github.io</a></li>
   </ul>
 
   <!--<ul class="nav navbar-nav navbar-right">
@@ -19,6 +19,6 @@
 
 {% block content %}
   {% for article in articles_arr %}
-    <a href="/articles/{{article['href']}}" style="font-size:2em;word-break: break-word;line-height: 40px;"><p>{{article['title']['title'][0]}}</p></a>
+    <a href="/articles/{{article['href']}}" style="font-size:2em;"><p>{{article['title']['title'][0]}}</p></a>
   {% endfor %}
 {% endblock %}
