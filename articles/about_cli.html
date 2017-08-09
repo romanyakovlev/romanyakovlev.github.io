@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Сайт</title>
+    <link rel="icon" href=" /static/image/favicon.ico">
+<!-- Bootstrap core CSS -->
+<link href=" /static/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href=" /static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href=" /static/css/jumbotron.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src=" /static/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src=" /static/js/ie-emulation-modes-warning.js"></script>
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src=" /static/js/html5shiv.min.js"></script>
+  <script src=" /static/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=" /static/js/jquery.min.js"></script>
+<script src=" /static/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src=" /static/js/ie10-viewport-bug-workaround.js"></script>
+
+  </head>
+
+  <body style="padding-top:0px;">
+  <style>
+      .without-background:focus, .without-background:active, .without-background:hover {
+          background-color: white !important;
+          text-decoration: underline !important;
+      }
+      .without-background {
+          font-size: 3em;
+      }
+  </style>
+    <nav class="navbar">
+      <div class="container">
+        <div class="row" style="margin-top:10px;">
+          <div class="col-md-8 col-md-offset-2">
+
+              
+<ul class="nav navbar-nav">
+    <li><a style="word-break: break-word;line-height: 40px;margin-bottom:25px;" class="navbar-brand without-background" href="http://romanyakovlev.github.io">romanyakovlev.github.io</a></li>
+</ul>
+
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          
+  <span style="font-size:2.5em;font-weight:bold;">Командная строка - с чего начать?</span>
+  <div style="font-size:1.5em;">
+      <p>Для начала разберемся что такое командная строка. Коротко, это программа, которая обеспечивает процесс взаимодействия между пользователем и операционной системой посредством текстового интерфейса. Для взаимодействия с командной строкой мы будем использовать консольный эмулятор, он же "Терминал".</p>
+<h1>Где находится Терминал?</h1>
+<h2>Mac OS X</h2>
+<p>Заходим в каталог «Программы&gt;Служебные программы» (Applications&gt;Utilities) и запускаем приложение Терминал (Terminal), либо открываем строку поиска Spotlight и набираем слово terminal.</p>
+<h2>Linux</h2>
+<p>Заходим в «Приложения&gt;Стандартные&gt;Терминал». По-другому эмулятор можно запустить через окно запуска приложений (в Ubuntu <code>Alt+F2</code>), либо комбинацией клавиш (<code>Ctrl+Alt+T</code> для Ubuntu)</p>
+<h2>Windows</h2>
+<p>Тут ситуация несколько сложнее. У вас есть два варианта. Первый (правильный) - установить Linux и забыть обо всех проблемах. Второй - установить свой терминал. Так как эта операционная система по умолчанию предоставляет эмулятор командной строки, непригодный для использования, нам потребуется другой. Мы остановимся на универсальном варианте - <a href="https://babun.github.io/">Babun</a>. Git, пакетный менеджер, unix инструменты - все это сразу есть внутри и понадобится тебе при разработке.</p>
+<h1>Основы интерфейса</h1>
+<p>Запускаем терминал и видим следующую строку. Если ты на ubuntu, то увидишь следущее:</p>
+<pre><code class="sh">имя_пользователя@имя_машины:~$
+</code></pre>
+
+<p>Перед вами строка приглашения ввода от (command prompt). Она говорит о том, что командная строка готова к вводу команд. После <code>:</code> указана текущая директория. В Unix-подобных системах домашняя директория отображается как символ тильда <code>~</code>. И в конце строки — знак доллара <code>$</code>. Это первичный ввод текущего пользователя. Он бывает нескольких видов:
+- <code>$</code> - команда запущена от имени текущего пользователя
+- <code>#</code> - командная строка запущена от суперпользователя (он же root)
+- <code>&gt;</code> - была введена команда, для выполнения которой необходимо указать какие-либо параметры, и сейчас ожидается ввод этих параметров</p>
+<h1>Синатксис</h1>
+<p>Исполняемая комманда имеет определенный синтаксис:</p>
+<pre><code class="sh">команда -опции аргументы
+</code></pre>
+
+<p>Для понимания работы рассмотрим пример комманды:</p>
+<pre><code class="sh">ls -l имя_папки
+</code></pre>
+
+<p>Что она делает? В данном примере команда <code>ls</code> показывает нам список всех файлов директории. Имя директории передается с помощью аргумента <code>имя_папки</code>. <code>-l</code> это флаг (опция), котороая сообщает команде <code>ls</code> то, что вывод файлов будет происходить в расширенном формате (права, размер, автор, дата изменения). Опции могут иметь 1 или 2 дефиса. При 1 дефисе опция задает односимвольные опции (флаги), например <code>-abc</code> означает три отдельных флага - <code>a, b, c</code>. При 2-х опция задает одну многосимвольную опцию, например <code>--check-permission</code>.</p>
+<h1>Базовые команды, которые ты должен знать</h1>
+<pre><code class="sh">ls имя_директории
+</code></pre>
+
+<p><strong>l</strong>i<strong>s</strong>t. Отображает содержание директории <code>имя_директории</code></p>
+<pre><code class="sh">cd путь_директории
+</code></pre>
+
+<p><strong>c</strong>hange <strong>d</strong>irectory. Меняет текущую директорию на <code>путь_директории</code>. Путь <code>..</code> возвратит тебя в родительскую папку, <code>~</code> - в корневой каталог</p>
+<pre><code class="sh">pwd
+</code></pre>
+
+<p><strong>p</strong>rint <strong>w</strong>orking <strong>d</strong>irectory. Показывает директорию, в которой ты сейчас находишься.</p>
+<pre><code class="sh">less
+</code></pre>
+
+<p>Выводит в консоль содержание файла.</p>
+<pre><code class="sh">cp файл имя_каталога
+</code></pre>
+
+<p><strong>с</strong>o<strong>p</strong>y. Копирует файл в <code>имя_каталога</code></p>
+<pre><code class="sh">mv файл имя_каталога
+</code></pre>
+
+<p><strong>m</strong>o<strong>v</strong>e. Перемещает файл в <code>имя_каталога</code></p>
+<pre><code class="sh">rm файл
+</code></pre>
+
+<p><strong>r</strong>e<strong>m</strong>ove. Удаляет файл</p>
+<pre><code class="sh">man имя_команды
+</code></pre>
+
+<p><strong>man</strong>nual. Отображает руководство любой команды</p>
+<pre><code class="sh">sudo имя_команды
+</code></pre>
+
+<p><strong>s</strong>uper <strong>u</strong>ser do. исполняет команду <code>имя_команды</code> от имени суперпользователя</p>
+<pre><code class="sh">mkdir имя_директории
+</code></pre>
+
+<p><strong>m</strong>a<strong>k</strong>e<strong>dir</strong>ectory. создает папку <code>имя_директории</code></p>
+<h1>Используй Табы</h1>
+<p>Табы в консоли это очень полезная и удобная штука, избавляющая тебя от необходимости набирать длинную команду или полное имя папки. Как это работает? Набери несколько символов нужной тебе команды и нажми <code>Tab</code>. Если введеных тобой символов будет достаточно для однозначного определения команды, то её недостающие буквы будут автоматически добавлены. Если подходящих по символам команд больше одной, то двойное нажатие <code>Tab</code> выведет список всех доступных. Точно таким же образом это работает с файлами/папками, что просто шикарно.</p>
+<h1>Используй историю</h1>
+<p>При разработке ты будешь использовать много разных консольных команд. Все эти команды записываются в историю (файл <code>.bash_history</code> в корневом каталоге). С ее помощью тебе больше не придется вручную набирать длинные или часто повторяющиеся команды, что позволит сэкономить твое время. Самый простой способ перемещения по истории - стрелки вверх и вниз. Чтобы отобразить всю историю введи в консоли:</p>
+<pre><code class="sh">history
+</code></pre>
+
+<p>Вот так:</p>
+<pre><code class="sh">history|grep cd
+</code></pre>
+
+<p>В консоль выведется список всех команд, где была употреблена команда <code>cd</code>.
+Пример одной строки из истории</p>
+<pre><code class="sh">114 cd folder
+</code></pre>
+
+<p><code>114</code> это номер команды. Чтобы вызвать эту команду нужно набрать в терминале <code>!номер_команды</code></p>
+<p>При вводе <code>!!</code> исполнится последняя введеная тобой команда. Ввод команды:</p>
+<pre><code class="sh">!имя_команды
+</code></pre>
+
+<p>исполнит последнюю выполненную команду <code>имя_команды</code>.</p>
+<h1>Перенаправление Ввода/Вывода</h1>
+<h2>Стандартный вывод</h2>
+<p>По умолчанию стандартный вывод данных показывает их в терминале. Чтобы отправить стандартный вывод в файл сделаем следующее:</p>
+<pre><code class="sh">history &gt; текстовый_файл.txt
+</code></pre>
+
+<p>В данном примере результат работы команды <code>ls</code> записан в файл <code>текстовый_файл.txt</code>. При использовании <code>&gt;</code> файл полностью перезаписывается. Чтобы не перезаписывать весь файл и добавить результат в конец используй <code>&gt;&gt;</code>.</p>
+<h2>Стандартный ввод</h2>
+<p>Множество команд могут принимать данные с помощью стандартного ввода. Обычно это ввод с клавиатуры, но мы это можем изменить, перенаправив ввод на файл с помощью <code>&lt;</code>:</p>
+<pre><code class="sh">grep cd &lt; текстовый_файл.txt
+</code></pre>
+
+<h2>Конвеер</h2>
+<p>С его помощью мы можем передавать стандартный ввод-вывод по целой цепочке команд, т.е. то, что выводит на поток стандартного вывода предыдущий процесс, попадает в поток стандартного ввода следующего процесса. Это мы уже делали примере выше:</p>
+<pre><code class="sh">history|grep cd
+</code></pre>
+
+<h1>Ссылки для дальнейшего чтения</h1>
+<ul>
+<li><a href="https://putty.org.ru/articles/unix-linux-ref.html">Расширенный справочник команд Unix</a></li>
+<li><a href="http://linuxgeeks.ru/bash-1.htm">Bash в примерах</a></li>
+<li><a href="http://linuxcommand.org/lc3_writing_shell_scripts.php">Writing shell scripts</a></li>
+<li><a href="https://opensourcehacker.com/2012/12/13/configuring-your-python-application-using-environment-variables/">Configuring your Python application using environment variables</a></li>
+</ul>
+  </div>
+  <h3><a href="/index.html" style="font-size:3em;">На главную</a></h3>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
